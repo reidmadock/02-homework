@@ -1,59 +1,97 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: grey;
     margin: 0rem;
+}
+
+/* Header section, top of page styling */
+
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: lightgrey;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 50px;
 }
 
 .header {
     display: flex;
-    flex-direction: row;
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header nav {
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-
-.header nav ul li {
+.section-nav li{
     display: inline-block;
-    margin-left: 20px;
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.section-nav li:hover{
+    /* Probably not what I want the final version to be, but a hover makes it clear it is clickable*/
+    color: black;
+}
+
+/* Main content section formatting */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.about-me h1 {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.about-me p {
+    font-size: 20px;
 }
 
 .projects {
     display: flex;
-    flex-wrap: wrap;    
-    width: auto;
-    height: 100%;   
-    padding: 10px;
-}
-
-.top-project {
-    display: flex;
-    width: 100%;
-    padding: 10px;
-}
-
-.top-project a {
-    width: 100%;
-    min-width: 400px;
-}
-
-.other-projects {
-    padding: 10px;
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 45%;
+    justify-content: center;
 }
+
+.project-container {
+    text-align: center;
+}
+.project-container img {
+    width: 100%;
+}
+
+.project-name {
+
+}
+
+/* Media queries for smaller displays */
 
 @media screen and (max-width: 768px) {
     /* Use flex-direction to stack the navbar, sidebar, and body */
-    .header {
+    header {
+        display: flex;
         flex-direction: column;
+    }
+    .section-nav li {
+        /* center looked weird with the left only margin adjustment */
+        margin-left: 8px;
+        margin-right: 8px;
     }
   }
