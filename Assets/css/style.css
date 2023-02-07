@@ -1,59 +1,161 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: #fafafa;
     margin: 0rem;
+}
+
+/* Header section, top of page styling */
+
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #eba134;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 50px;
 }
 
 .header {
     display: flex;
-    flex-direction: row;
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header nav {
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.section-nav li{
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.section-nav a{
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+
+.section-nav li:hover{
+    /* Probably not what I want the final version to be, but a hover makes it clear it is clickable*/
+    color: black;
+}
+
+.section-nav li a:hover{
+    /* Probably not what I want the final version to be, but a hover makes it clear it is clickable*/
+    color: black;
+}
+
+/* Main content section formatting */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.about-me h1 {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.about-me p {
     font-size: 20px;
 }
 
-.header nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+/* Project formatting */
+
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-section h1 {
+    font-size: 40px;
+    margin-right: 10px;
 }
 
 .projects {
     display: flex;
-    flex-wrap: wrap;    
-    width: auto;
-    height: 100%;   
-    padding: 10px;
+    flex-flow: column wrap;
+    align-content: center;
 }
 
-.top-project {
+.top {
     display: flex;
-    width: 100%;
-    padding: 10px;
+    min-height: 100px;
+    min-width: 200px;
 }
 
-.top-project a {
-    width: 100%;
-    min-width: 400px;
-}
-
-.other-projects {
-    padding: 10px;
+.bottom {
     display: flex;
-    flex-wrap: wrap;
-    width: 45%;
+    flex-flow: row wrap;
+    min-height: 100px;
+    min-width: 100px;
+    justify-content: space-between;
 }
+
+.bottom div {
+    flex: 1 0 0;
+    min-width: 40%;
+    max-height: 160px;
+}
+
+.projects div a img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* Contact Info Styling */
+
+.contact-info {
+    display: flex;
+    margin-top: 20px;
+    background-color: #eba134;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+}
+
+.contact-info h1 {
+    font-size: 40px;
+    margin-left: 8px;
+}
+
+.contact-info li {
+    display: inline-block;
+}
+
+/* Media queries for smaller displays */
 
 @media screen and (max-width: 768px) {
     /* Use flex-direction to stack the navbar, sidebar, and body */
-    .header {
+    header {
+        display: flex;
         flex-direction: column;
+    }
+    .section-nav li {
+        /* center looked weird with the left only margin adjustment */
+        margin-left: 8px;
+        margin-right: 8px;
     }
   }
