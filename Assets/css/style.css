@@ -104,22 +104,37 @@ header h1 {
 }
 
 .projects {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     max-width: 65%;
-    max-width: 800px;
     justify-content: center;
 }
 
-.container a img {
-    object-fit: cover;
+
+.container:first-child {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .container {
     position: relative;
-    aspect-ratio: 16 / 9;
+    width: 50%;
+    aspect-ratio: 4 / 3;
     text-align: center;
+}
+
+.container div {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    background-color: #eba134;
+    font-size: x-large;
+}
+
+.container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .container a {
