@@ -1,6 +1,11 @@
+:root {
+    --main-txt-color: #ffffff;
+}
+
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 body {
     height: 100vh;
@@ -15,7 +20,7 @@ header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #eba134;
-    color: #ffffff;
+    color: var(--main-txt-color);
 }
 
 header h1 {
@@ -29,8 +34,10 @@ header h1 {
 }
 
 .header img{
-    max-width: 120px;
-    max-height: 120px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .section-nav li{
@@ -42,11 +49,13 @@ header h1 {
 .section-nav a{
     display: block;
     padding: 8px;
+    text-decoration: none;
+    color: var(--main-txt-color);
 }
 
 .section-nav li:hover{
     /* Probably not what I want the final version to be, but a hover makes it clear it is clickable*/
-    color: black;
+    
 }
 
 .section-nav li a:hover{
