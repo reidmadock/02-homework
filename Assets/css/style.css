@@ -1,6 +1,11 @@
+:root {
+    --main-txt-color: #ffffff;
+}
+
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 body {
     height: 100vh;
@@ -15,7 +20,7 @@ header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #eba134;
-    color: #ffffff;
+    color: var(--main-txt-color);
 }
 
 header h1 {
@@ -29,8 +34,10 @@ header h1 {
 }
 
 .header img{
-    max-width: 120px;
-    max-height: 120px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .section-nav li{
@@ -42,11 +49,13 @@ header h1 {
 .section-nav a{
     display: block;
     padding: 8px;
+    text-decoration: none;
+    color: var(--main-txt-color);
 }
 
 .section-nav li:hover{
     /* Probably not what I want the final version to be, but a hover makes it clear it is clickable*/
-    color: black;
+    
 }
 
 .section-nav li a:hover{
@@ -57,7 +66,7 @@ header h1 {
 /* Main content section formatting */
 
 .main-content {
-    display: flex;
+    display: grid;
     flex-direction: column;
     margin: 20px;
     
@@ -82,56 +91,57 @@ header h1 {
 
 /* Project formatting */
 
-
 .project-section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
-.project-section h1 {
+.project-header {
+    display: flex;
+    justify-content: center;
     font-size: 40px;
     margin-right: 10px;
 }
 
 .projects {
     display: flex;
-    flex-flow: column wrap;
-    align-content: center;
+    flex-wrap: wrap;
+    max-width: 65%;
+    justify-content: center;
 }
 
-.top {
-    display: flex;
-    min-height: 100px;
-    min-width: 200px;
-}
 
-.top div {
+.container:first-child {
     width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
-.bottom {
-    display: flex;
-    flex-flow: row wrap;
-    min-height: 100px;
-    min-width: 100px;
-    justify-content: space-between;
+.container {
+    position: relative;
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    text-align: center;
 }
 
-.bottom div {
-    flex: 1 0 0;
-    min-width: 40%;
-    max-height: 160px;
+.container div {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    background-color: #eba134;
+    font-size: x-large;
 }
 
-.projects div a img {
+.container img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.container {
-    border-style: solid;
-    border-width: 2px;
+.container a {
+    text-decoration: none;
+    font-size: x-large;
+    background-color: #eba134;
+    color: black;
 }
 
 /* Contact Info Styling */
