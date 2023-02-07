@@ -28,6 +28,11 @@ header h1 {
     align-items: center;
 }
 
+.header img{
+    max-width: 120px;
+    max-height: 120px;
+}
+
 .section-nav li{
     display: inline-block;
     font-size: 24px;
@@ -37,7 +42,6 @@ header h1 {
 .section-nav a{
     display: block;
     padding: 8px;
-    background-color: #dddddd;
 }
 
 .section-nav li:hover{
@@ -102,6 +106,10 @@ header h1 {
     min-width: 200px;
 }
 
+.top div {
+    width: 100%;
+}
+
 .bottom {
     display: flex;
     flex-flow: row wrap;
@@ -137,12 +145,15 @@ header h1 {
 }
 
 .contact-info h1 {
-    font-size: 40px;
+    font-size: 50px;
     margin-left: 8px;
 }
 
 .contact-info li {
+    display: flex;
     display: inline-block;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /* Media queries for smaller displays */
@@ -155,6 +166,7 @@ header h1 {
     }
     .section-nav li {
         /* center looked weird with the left only margin adjustment */
+        font-size: 24px;
         margin-left: 8px;
         margin-right: 8px;
     }
