@@ -1,5 +1,4 @@
 # 02 Advanced CSS: Portfolio
 
 ## Intro
-
-This website is going to be super ugly and barron until I have more stuff to fill it with.
+Website still pretty ugly, not perfectly functional, but filled with royalty free images, and functioning links.
