@@ -1,25 +1,30 @@
 :root {
     --main-txt-color: #ffffff;
+    --main-backround-clr: #0f1225;
+    --main-accent-clr: #322356;
+
+    --secondary-clr: #eba134;
+    --ff-body: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --ff-header: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 
 
 body {
-    height: 100vh;
-    width: 100vw;
-    background-color: #fafafa;
+    background-color: var(--main-backround-clr);
+    font-family: var(--ff-body);
     margin: 0rem;
 }
 
 /* Header section, top of page styling */
 
 header {
+    font-family: var(--ff-header);
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #eba134;
+    background-color: var(--main-accent-clr);
     color: var(--main-txt-color);
 }
 
@@ -42,12 +47,12 @@ header h1 {
 
 .section-nav li{
     display: inline-block;
+    list-style: none;
     font-size: 24px;
     margin-left: 16px;
 }
 
 .section-nav a{
-    display: block;
     padding: 8px;
     text-decoration: none;
     color: var(--main-txt-color);
@@ -66,10 +71,7 @@ header h1 {
 /* Main content section formatting */
 
 .main-content {
-    display: grid;
-    flex-direction: column;
-    margin: 20px;
-    
+    /* margin: 20px; */
 }
 
 .about-me {
@@ -127,7 +129,7 @@ header h1 {
     position: absolute;
     bottom: 8px;
     left: 16px;
-    background-color: #eba134;
+    background-color: var(--secondary-clr);
     font-size: x-large;
 }
 
@@ -147,7 +149,6 @@ header h1 {
 /* Contact Info Styling */
 
 .contact-info {
-    display: flex;
     margin-top: 20px;
     background-color: #eba134;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
