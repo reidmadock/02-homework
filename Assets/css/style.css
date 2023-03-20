@@ -15,6 +15,7 @@
 
 body {
     background-color: var(--main-backround-clr);
+    color: var(--main-txt-color);
     font-family: var(--ff-body);
     margin: 0rem;
 }
