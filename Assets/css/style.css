@@ -24,13 +24,21 @@ body {
 
 header {
     font-family: var(--ff-header);
-    padding: 20px;
+    padding: 12px;
     background-color: var(--main-accent-clr);
     color: var(--main-txt-color);
 }
 
+#me {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Hardcoding this cute little offset is a bad idea, but I don't want to fix it right now. */
 header h1 {
     font-size: 50px;
+    padding-top: 2rem;
+    padding-left: 1rem;
 }
 
 .header {
@@ -44,6 +52,10 @@ header h1 {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+footer {
+    visibility: collapse;
 }
 
 .section-nav li{
@@ -113,7 +125,6 @@ header h1 {
     justify-content: center;
 }
 
-
 .container:first-child {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -124,6 +135,7 @@ header h1 {
     width: 50%;
     aspect-ratio: 4 / 3;
     text-align: center;
+    overflow: hidden;
 }
 
 .container div {
@@ -131,34 +143,51 @@ header h1 {
     bottom: 8px;
     left: 16px;
     background-color: var(--secondary-clr);
-    font-size: x-large;
+    padding: .2rem;
+    
 }
 
 .container img {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
     height: 100%;
+    transition: 0.2s all ease-in-out;
+}
+
+.container img:hover {
+    transform: scale(1.05);
 }
 
 .container a {
     text-decoration: none;
     font-size: x-large;
-    background-color: #eba134;
     color: black;
+}
+
+.container a:hover {
+    color: var(--main-txt-color);
 }
 
 /* Contact Info Styling */
 
 .contact-info {
     margin-top: 20px;
-    background-color: #eba134;
+    background-color: var(--main-accent-clr);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ffffff;
+    color: var(--main-txt-color);
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--main-txt-color);
+}
+.contact-info a:hover {
+    color: var(--secondary-clr);
 }
 
 .contact-info h1 {
     font-size: 50px;
-    margin-left: 8px;
+    margin-left: 1rem;
 }
 
 .contact-info li {
@@ -166,6 +195,7 @@ header h1 {
     display: inline-block;
     flex-direction: row;
     justify-content: space-around;
+    padding: .5rem;
 }
 
 /* Media queries for smaller displays */
